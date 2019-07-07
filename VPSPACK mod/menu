@@ -1,0 +1,61 @@
+#!/bin/bash
+#Menu de VPSPACK MOD
+echo "VPSPACK MOD V1"
+echo "Operaciones para realizar:"
+echo ""
+echo "00) Salir."
+echo "01) Crear Usuario."
+echo "02) Eliminar Usuario."
+echo "03) Modificar Usuario."
+echo "04) Instalar Dropbear."
+echo "05) Instalar Squid3."
+echo "06) Instalar BadVPN."
+echo "07) Iniciar BadVPN."
+echo "08) Detener BadVPN."
+echo ""
+echo "Opcion: "
+read -p opcion 
+case opcion in
+	0 | 00 )
+	break
+	exit
+	;;
+	1 | 01 )
+	crearusuario
+	break
+	;;
+	2 | 02 )
+	eliminarusuario
+	break
+	;;
+	3 | 03 )
+	modificarusuario
+	break
+	;;
+	4 | 03 )
+	redefinirusuario
+	break
+	;;
+	5 | 05 )
+	sq3
+	break
+	;;
+	6 | 06 )
+	
+	break
+	;;
+	7 | 07 )
+
+	break
+	;;
+	8 | 08 )
+	
+	break
+	;;
+	*)
+	break
+	sleep 1s
+	;;
+esac
+done
+exit
