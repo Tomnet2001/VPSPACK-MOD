@@ -7,11 +7,12 @@ echo "00) Salir."
 echo "01) Crear Usuario."
 echo "02) Eliminar Usuario."
 echo "03) Modificar Usuario."
-echo "04) Instalar Dropbear."
-echo "05) Instalar Squid3."
+echo "04) Instalar Squid3."
+echo "05) Instalar Dropbear."
 echo "06) Instalar BadVPN."
 echo "07) Iniciar BadVPN."
 echo "08) Detener BadVPN."
+echo "09) Test de velocidad."
 echo ""
 echo "Opcion: "
 read -p opcion 
@@ -29,27 +30,31 @@ case opcion in
 	break
 	;;
 	3 | 03 )
-	modificarusuario
-	break
-	;;
-	4 | 03 )
 	redefinirusuario
 	break
 	;;
-	5 | 05 )
+	4 | 03 )
 	sq3
 	break
 	;;
+	5 | 05 )
+	dropb
+	break
+	;;
 	6 | 06 )
-	
+	wget https://github.com/Tomnet2001/VPSPACK-MOD/blob/master/VPSPACK%20mod/badvpn.sh && bash badvpn.sh
 	break
 	;;
 	7 | 07 )
-
+	badvpn start
 	break
 	;;
 	8 | 08 )
-	
+	badvpn stop
+	break
+	;;
+	9 | 09 )
+	speedtest.py
 	break
 	;;
 	*)
